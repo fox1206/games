@@ -82,6 +82,7 @@ main .top .search span{
   right: 1rem;
   bottom: .4rem;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 main .top input{

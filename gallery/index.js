@@ -5,6 +5,8 @@ const descriptions = document.querySelectorAll('.title');
 const theme = document.querySelector('.theme');
 const moon = document.querySelector('.moon');
 const sun = document.querySelector('.sun');
+const search = document.querySelector('#search-area');
+const searchIcon = document.querySelector('#search-icon');
 
 // переключение по слайдам
 slides.forEach((slide, i) => {
@@ -43,6 +45,18 @@ async function getData() {
   
   show(data);
 }
+
+// поиск картинок
+function searchPicture() {
+  url = `https://api.unsplash.com/search/photos?query=${search.value}&per_page=5&orientation=landscape&client_id=3WpPCmsMiCip2kElqstSmR-fsccqRSrk7I9biUSX5R0`;
+  slides.innerHTML = '';
+  getData(url);
+}
+
+searchIcon.addEventListener('click', searchPicture);
+search.addEventListener('keydown', (event) => {
+  if(event.keyCode === 13){ searchPicture() }
+});
 
 // показать картинки  и описание к картинкам
 function show(data){
