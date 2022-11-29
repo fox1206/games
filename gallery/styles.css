@@ -51,5 +51,5 @@ body{
 
 .slide.active h3{
   opacity: 1;
-  transition: opacity .3s all ease-in;
+  transition: opacity .3s ease-in .4s;
 }
