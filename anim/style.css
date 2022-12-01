@@ -3,3 +3,33 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #111;
+  overflow: hidden;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 31rem;
+}
+
+.square{
+  width: 1rem;
+  height: 1rem;
+  margin: 0.125rem;
+  box-shadow: 0 0 0.125rem #000;
+  background-color: #1d1d1d;
+  transition: 4s ease;
+}
+
+.square:hover{
+  transition-duration: 0s;
+}
